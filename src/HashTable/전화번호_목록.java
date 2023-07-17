@@ -8,23 +8,13 @@ public class 전화번호_목록 {
         boolean answer = true;
         HashSet<String> hashSet = new HashSet<>();
         for(String number : phone_book){
-            Iterator<String> it = hashSet.iterator();
-            while(it.hasNext()){
-                String prefix = it.next();
-                if(prefix.length() > number.length()){
-                    if(prefix.startsWith(number)){
-                        return false;
-                    }
-                }
-                else if(prefix.length() == number.length()){
-                    if(prefix.equals(number)){
-                        return false;
-                    }
-                }
-                else{
-                    if(number.startsWith(prefix)){
-                        return false;
-                    }
+            hashSet.add(number);
+        }
+        for(String number : phone_book){
+            hashSet.remove(number);
+            for(int i = 0 ; i < number.length() ; i++){
+                if(hashSet.contains(number.substring(0,i))){
+                    return false;
                 }
             }
             hashSet.add(number);
