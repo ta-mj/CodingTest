@@ -1,14 +1,13 @@
 import java.util.Arrays;
-
+import HashTable.베스트앨범;
 public class Main {
     public static void main(String[] args) {
-        String s = "-1 -2 -3 -4";
-        String[] arr = s.split(" ");
-        int[] arr_int = Arrays.stream(s.split(" "))
-                .mapToInt(i->Integer.parseInt(i))
-                .sorted()
-                .toArray();
-        System.out.println(arr_int[0] + " " + arr_int[arr_int.length - 1]);
-
+        베스트앨범 bestalbum = new 베스트앨범();
+        String[] genres = {"classic", "pop", "classic", "classic", "pop"};
+        int[] plays = {500, 600, 150, 800, 2500};
+        int[] result = bestalbum.solution(genres,plays);
+        for(int i : result){
+            System.out.println(i);
+        }
     }
 }
