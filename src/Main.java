@@ -1,13 +1,15 @@
 import java.util.Arrays;
 import HashTable.베스트앨범;
+import StackAndQueue.기능개발;
 public class Main {
     public static void main(String[] args) {
-        베스트앨범 bestalbum = new 베스트앨범();
-        String[] genres = {"classic", "pop", "classic", "classic", "pop"};
-        int[] plays = {500, 600, 150, 800, 2500};
-        int[] result = bestalbum.solution(genres,plays);
-        for(int i : result){
-            System.out.println(i);
+        기능개발 기능개발 = new 기능개발();
+        int[] progress = {93, 30, 55};
+        int[] speeds = {1, 30, 5};
+        int[] result = 기능개발.solution(progress,speeds);
+        for(int num : result){
+            System.out.print(num + ",");
+
         }
     }
 }
