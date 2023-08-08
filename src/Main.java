@@ -7,9 +7,6 @@ public class Main {
         int[] progress = {93, 30, 55};
         int[] speeds = {1, 30, 5};
         int[] result = 기능개발.solution(progress,speeds);
-        for(int num : result){
-            System.out.print(num + ",");
-
-        }
+        System.out.println(Arrays.toString(result));
     }
 }
